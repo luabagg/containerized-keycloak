@@ -31,6 +31,10 @@ See more at [Keycloak Authorization with KrakenD API Gateway](https://www.kraken
     ```sh
     docker compose build
     ```
+- Add the environment file
+    ```sh
+    cp .env_sample .env
+    ```
 - Start the server
     ```sh
     docker compose up
