@@ -33,7 +33,7 @@ See more at [Keycloak Authorization with KrakenD API Gateway](https://www.kraken
     ```
 - Add the environment file
     ```sh
-    cp .env_sample .env
+    cp .env.example .env
     ```
 - Start the server
     ```sh
@@ -46,10 +46,10 @@ See more at [Keycloak Authorization with KrakenD API Gateway](https://www.kraken
 - Configure Keycloak DB in pgAdmin ([localhost:5050](http://localhost:5050))
     1. Login (defaults: admin@pgadmin.com, admin)
 
-        ![pgAdmin Login](docs/pgAdmin_login.png)
+        ![pgAdmin Login](docs/_media/pgAdmin_login.png)
 
     2. Login (defaults: postgres, 5432, keycloak, keycloak, password)
 
-        ![pgAdmin Register](docs/pgAdmin_register.png)
+        ![pgAdmin Register](docs/_media/pgAdmin_register.png)
 
     3. You're all set! Start using and configuring Keycloak at [localhost:8080](http://localhost:8080)
