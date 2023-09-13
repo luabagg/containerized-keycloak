@@ -19,7 +19,7 @@ ENV KC_METRICS_ENABLED=true
 # Uncomment this line to install custom themes (it should point to the right directory)
 # COPY config/themes/custom /opt/keycloak/themes/custom
 
-COPY ./config/jdbc/cache-ispn-jdbc-ping.xml /opt/keycloak/conf/cache-ispn-jdbc-ping.xml
+COPY ./config/infinispan/cache-ispn-jdbc-ping.xml /opt/keycloak/conf/cache-ispn-jdbc-ping.xml
 ENV KC_CACHE_CONFIG_FILE=cache-ispn-jdbc-ping.xml
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
