@@ -78,22 +78,22 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-  # pgadmin:
-  #   depends_on:
-  #     postgres:
-  #       condition: service_healthy
-  #   image: dpage/pgadmin4:7.5
-  #   container_name: pgadmin4
-  #   restart: always
-  #   environment:
-  #     PGADMIN_DEFAULT_EMAIL: admin@pgadmin.com
-  #     PGADMIN_DEFAULT_PASSWORD: admin
-  #   volumes:
-  #     - ${DATA_DIR}/pgadmin:/var/lib/pgadmin
-  #   ports:
-  #     - "${PGADMIN_PORT}:80"
-  #   networks:
-  #     - auth-network
+  pgadmin:
+    depends_on:
+      postgres:
+        condition: service_healthy
+    image: dpage/pgadmin4:7.5
+    container_name: pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@pgadmin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    volumes:
+      - ${DATA_DIR}/pgadmin:/var/lib/pgadmin
+    ports:
+      - "${PGADMIN_PORT}:80"
+    networks:
+      - auth-network
 networks:
   auth-network:
     driver: bridge
