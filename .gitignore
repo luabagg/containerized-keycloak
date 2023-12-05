@@ -1,5 +1,6 @@
-# Ignore data directory
+# Ignore repository folders
 data/
+docs/
 
 # Env file
 .env
